@@ -1,6 +1,6 @@
-package org.cyberpwn.clust.cluster;
+package org.cyberpwn.clust;
 
-import org.cyberpwn.clust.cluster.DataCluster.ClusterDataType;
+import org.cyberpwn.clust.DataCluster.ClusterDataType;
 
 public class ClusterString extends Cluster
 {

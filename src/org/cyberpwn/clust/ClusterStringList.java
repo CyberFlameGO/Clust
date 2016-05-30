@@ -1,8 +1,8 @@
-package org.cyberpwn.clust.cluster;
+package org.cyberpwn.clust;
 
 import java.util.List;
 
-import org.cyberpwn.clust.cluster.DataCluster.ClusterDataType;
+import org.cyberpwn.clust.DataCluster.ClusterDataType;
 
 public class ClusterStringList extends Cluster
 {

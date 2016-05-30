@@ -1,4 +1,4 @@
-package org.cyberpwn.clust.cluster;
+package org.cyberpwn.clust;
 
 import java.io.File;
 import java.io.IOException;

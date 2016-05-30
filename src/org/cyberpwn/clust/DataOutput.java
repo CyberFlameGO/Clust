@@ -1,13 +1,12 @@
-package org.cyberpwn.clust.cluster;
+package org.cyberpwn.clust;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class DataInput implements DataInputtable
+public class DataOutput implements DataOutputtable
 {
 	@Override
-	public void load(DataCluster cluster, File file) throws IOException
+	public void save(DataCluster cluster, File file) throws IOException
 	{
 		if(file.exists())
 		{
@@ -19,7 +18,8 @@ public class DataInput implements DataInputtable
 		
 		else
 		{
-			throw new FileNotFoundException();
+			file.getParentFile().mkdirs();
+			file.createNewFile();
 		}
 	}
 }

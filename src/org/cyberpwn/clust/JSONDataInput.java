@@ -1,13 +1,9 @@
-package org.cyberpwn.clust.port;
+package org.cyberpwn.clust;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-
-import org.cyberpwn.clust.cluster.DataCluster;
-import org.cyberpwn.clust.cluster.DataInput;
-import org.cyberpwn.clust.lib.json.JSONObject;
 
 public class JSONDataInput extends DataInput
 {

@@ -1,4 +1,4 @@
-package org.cyberpwn.clust.lib.json;
+package org.cyberpwn.clust;
 
 import java.io.BufferedReader;
 import java.io.IOException;

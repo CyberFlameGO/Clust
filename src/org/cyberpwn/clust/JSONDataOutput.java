@@ -1,12 +1,8 @@
-package org.cyberpwn.clust.port;
+package org.cyberpwn.clust;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
-
-import org.cyberpwn.clust.cluster.DataCluster;
-import org.cyberpwn.clust.cluster.DataOutput;
-import org.cyberpwn.clust.lib.json.JSONObject;
 
 public class JSONDataOutput extends DataOutput
 {

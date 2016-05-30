@@ -1,4 +1,4 @@
-package org.cyberpwn.clust.lib.json;
+package org.cyberpwn.clust;
 
 /*
 Copyright (c) 2008 JSON.org

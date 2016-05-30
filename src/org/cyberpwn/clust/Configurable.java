@@ -1,4 +1,4 @@
-package org.cyberpwn.clust.cluster;
+package org.cyberpwn.clust;
 
 public interface Configurable
 {
