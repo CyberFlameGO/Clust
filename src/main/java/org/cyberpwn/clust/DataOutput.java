@@ -3,10 +3,19 @@ package org.cyberpwn.clust;
 import java.io.File;
 import java.io.IOException;
 
-public class DataOutput implements DataOutputtable
+public class DataOutput implements Output
 {
+	protected DataCluster cluster;
+	protected File file;
+	
+	public DataOutput(DataCluster cluster, File file)
+	{
+		this.cluster = cluster;
+		this.file = file;
+	}
+	
 	@Override
-	public void save(DataCluster cluster, File file) throws IOException
+	public void save() throws IOException
 	{
 		if(file.exists())
 		{

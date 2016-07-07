@@ -4,10 +4,19 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class DataInput implements DataInputtable
+public class DataInput implements Input
 {
+	protected DataCluster cluster;
+	protected File file;
+	
+	public DataInput(DataCluster cluster, File file)
+	{
+		this.cluster = cluster;
+		this.file = file;
+	}
+	
 	@Override
-	public void load(DataCluster cluster, File file) throws IOException
+	public void load() throws IOException
 	{
 		if(file.exists())
 		{

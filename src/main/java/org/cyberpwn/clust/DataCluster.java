@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class DataCluster
 {
@@ -13,10 +14,22 @@ public class DataCluster
 	}
 	
 	private Map<String, Cluster> data;
+	private Map<String, String> comments;
 	
 	public DataCluster()
 	{
 		this.data = new HashMap<String, Cluster>();
+		this.comments = new HashMap<String, String>();
+	}
+	
+	public Set<String> getKeys()
+	{
+		return data.keySet();
+	}
+	
+	public void setComment(String key, String comment)
+	{
+		comments.put(key, comment);
 	}
 	
 	public void trySet(String key, Object o)
@@ -50,7 +63,7 @@ public class DataCluster
 		{
 			List<String> l = new ArrayList<String>();
 			
-			for(Object i : (List<?>)o)
+			for(Object i : (List<?>) o)
 			{
 				l.add(i.toString());
 			}
@@ -82,6 +95,36 @@ public class DataCluster
 	public void set(String key, List<String> value)
 	{
 		data.put(key, new ClusterStringList(value));
+	}
+	
+	public void set(String key, int value, String comment)
+	{
+		data.put(key, new ClusterInteger(value));
+		setComment(key, comment);
+	}
+	
+	public void set(String key, double value, String comment)
+	{
+		data.put(key, new ClusterDouble(value));
+		setComment(key, comment);
+	}
+	
+	public void set(String key, boolean value, String comment)
+	{
+		data.put(key, new ClusterBoolean(value));
+		setComment(key, comment);
+	}
+	
+	public void set(String key, String value, String comment)
+	{
+		data.put(key, new ClusterString(value));
+		setComment(key, comment);
+	}
+	
+	public void set(String key, List<String> value, String comment)
+	{
+		data.put(key, new ClusterStringList(value));
+		setComment(key, comment);
 	}
 	
 	public Boolean getBoolean(String key)
